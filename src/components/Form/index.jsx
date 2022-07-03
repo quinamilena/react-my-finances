@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import Grid from '../Grid';
+import Actions from '../Actions';
 import * as Style from './styles';
+import { FaPlus } from 'react-icons/fa';
 
-const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
+const Form = ({
+  handleAdd,
+  transactionsList,
+  setTransactionsList,
+  handleRemove,
+}) => {
   const [desc, setDesc] = useState('');
-  const [amount, setAmount] = useState('');
+  const [amount, setAmount] = useState(0);
   const [isExpense, setExpense] = useState(false);
 
   const generateId = () => Math.round(Math.random() * 10000);
@@ -22,17 +29,20 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
       return;
     }
 
+    const amountMask = Number(amount).toFixed(2);
+
     const transaction = {
       id: generateId(),
       desc,
       amount,
+      amountMask,
       expense: isExpense,
     };
 
     handleAdd(transaction);
 
     setDesc('');
-    setAmount('');
+    setAmount(0);
   };
 
   return (
@@ -70,8 +80,12 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
           />
           <Style.Label htmlFor="rExpenses">Saída</Style.Label>
         </Style.RadioGroup>
-        <Style.Button onClick={handleSave}>Adicionar</Style.Button>
+        <Style.Button onClick={handleSave}>
+          <FaPlus />
+          Adicionar
+        </Style.Button>
       </Style.Container>
+      <Actions itens={transactionsList} handleRemove={handleRemove} />
       <Grid itens={transactionsList} setItens={setTransactionsList} />
     </>
   );

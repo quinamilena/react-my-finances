@@ -49,6 +49,18 @@ const App = () => {
     localStorage.setItem('transactions', JSON.stringify(newArrayTransactions));
   };
 
+  const handleRemove = () => {
+    const confirmUser = window.confirm(
+      'Você deseja apagar todos os registros ?'
+    );
+
+    if (!confirmUser) return;
+
+    setTransactionsList([]);
+
+    localStorage.setItem('transactions', JSON.stringify([]));
+  };
+
   return (
     <>
       <ReactTooltip />
@@ -58,6 +70,7 @@ const App = () => {
         handleAdd={handleAdd}
         transactionsList={transactionsList}
         setTransactionsList={setTransactionsList}
+        handleRemove={handleRemove}
       />
       <GlobalStyles />
     </>

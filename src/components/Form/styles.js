@@ -54,6 +54,10 @@ const Button = styled.button`
   background-color: #009688;
   font-size: 14px;
   font-weight: bold;
+
+  & svg {
+    margin: 4px 4px 0 0;
+  }
 `;
 
 export { Container, InputContent, Label, Input, RadioGroup, Button };
