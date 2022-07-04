@@ -7,7 +7,7 @@ Aplicativo para calcular entradas e saídas financeiras.
 Clone o projeto
 
 ```bash
-  git clone https://github.com/quinamilena/weather-app.git
+  git clone https://github.com/quinamilena/my-finances.git
 ```
 
 Entre no diretório do projeto
