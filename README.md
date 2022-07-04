@@ -34,7 +34,7 @@ Inicie o servidor
 
 ## 💻 Demonstração
 
-Pesquise o nome de uma cidade no campo de pesquisa.
+Digite a descrição, o valor e informe se é uma entrada ou saída.
 
 ![my-finances-gif](./infoReadme/my-finances-gif.gif)
 
