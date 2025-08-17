@@ -15,7 +15,7 @@ const Grid = ({ itens, setItens }) => {
         <Style.Tr>
           <Style.Th width={40}>Descrição</Style.Th>
           <Style.Th width={40}>Valor</Style.Th>
-          <Style.Th width={10} alignCenter>
+          <Style.Th width={10} style={{ textAlign: 'center' }}>
             Tipo
           </Style.Th>
           <Style.Th width={10}></Style.Th>

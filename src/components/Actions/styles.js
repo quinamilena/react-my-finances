@@ -24,9 +24,6 @@ const Button = styled.button`
   position: relative;
   z-index: 1;
 
-  margin-right: ${(props) =>
-    props.marginRight ? `${props.marginRight}px` : 0};
-
   & svg {
     margin: 4px 4px 0 0;
   }

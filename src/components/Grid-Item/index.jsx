@@ -11,26 +11,26 @@ const GridItem = ({ item, onDelete }) => {
     <Style.Tr>
       <Style.Td>{item.desc}</Style.Td>
       <Style.Td>{item.amountMask}</Style.Td>
-      <Style.Td alignCenter>
+      <Style.Td style={{ textAlign: 'center' }}>
         {item.expense ? (
           <FaRegArrowAltCircleDown
             color="red"
-            data-tip="Saída"
-            data-place="right"
+            data-tooltip-id="tooltip-grid"
+            data-tooltip-content="Saída"
           />
         ) : (
           <FaRegArrowAltCircleUp
             color="green"
-            data-tip="Entrada"
-            data-place="right"
+            data-tooltip-id="tooltip-grid"
+            data-tooltip-content="Entrada"
           />
         )}
       </Style.Td>
-      <Style.Td alignCenter>
+      <Style.Td style={{ textAlign: 'center' }}>
         <FaTrash
           onClick={() => onDelete(item.id)}
-          data-tip="Excluir"
-          data-place="right"
+          data-tooltip-id="tooltip-grid"
+          data-tooltip-content="Excluir"
         />
       </Style.Td>
     </Style.Tr>

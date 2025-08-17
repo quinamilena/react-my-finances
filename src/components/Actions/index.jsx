@@ -27,7 +27,11 @@ const Actions = ({ itens, handleRemove }) => {
       <Style.Button onClick={handleOnExport}>
         <FaRegFileExcel /> Export
       </Style.Button>
-      <Style.Button onClick={handleRemove} width={130} marginRight={5}>
+      <Style.Button
+        onClick={handleRemove}
+        width={130}
+        style={{ marginRight: '10px' }}
+      >
         <FaTrashRestore />
         Apagar Todos
       </Style.Button>

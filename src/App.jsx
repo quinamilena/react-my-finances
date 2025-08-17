@@ -4,7 +4,7 @@ import GlobalStyles from './styles/global';
 import Header from './components/Header';
 import Resume from './components/Resume/index';
 import Form from './components/Form';
-import ReactTooltip from 'react-tooltip';
+import { Tooltip } from 'react-tooltip';
 
 const App = () => {
   const data = localStorage.getItem('transactions');
@@ -63,7 +63,7 @@ const App = () => {
 
   return (
     <>
-      <ReactTooltip />
+      <Tooltip id="tooltip-grid" place="right" />
       <Header />
       <Resume income={income} expense={expense} total={total} />
       <Form
