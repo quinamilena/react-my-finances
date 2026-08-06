@@ -19,13 +19,19 @@ Entre no diretório do projeto
 Instale as dependências
 
 ```bash
-  npm install
+  bun install
 ```
 
-Inicie o servidor
+Inicie o servidor de desenvolvimento
 
 ```bash
-  npm run start
+  bun run dev
+```
+
+Gere o build de produção
+
+```bash
+  bun run build
 ```
 
 ## 📷 Screenshots
